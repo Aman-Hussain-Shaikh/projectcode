@@ -6,7 +6,7 @@ import ProductList from "./ProductList";
 import ProductListED from "./ProductListED";
 
 const ProductPage = ({ fetchProductsRequest }) => {
-  // Fetch products when the component mounts
+ 
   useEffect(() => {
     fetchProductsRequest();
   }, [fetchProductsRequest]);

@@ -1,5 +1,3 @@
-// ProductListED.jsx
-
 import React, { useEffect, useState } from "react";
 import { connect } from 'react-redux';
 import { fetchProductsRequest, deleteProduct, updateProduct } from '../../redux/actions/actions';
@@ -10,15 +8,14 @@ const ProductListED = ({ products, loading, error, fetchProductsRequest, deleteP
     fetchProductsRequest();
   }, [fetchProductsRequest]);
 
-  // State to manage edited product data
+
   const [editedProduct, setEditedProduct] = useState(null);
 
-  // Function to handle editing of product data
   const handleEdit = (product) => {
     setEditedProduct(product);
   };
 
-  // Function to handle updating the product
+
   const handleUpdate = () => {
     if (editedProduct) {
       updateProduct(editedProduct);
@@ -26,7 +23,7 @@ const ProductListED = ({ products, loading, error, fetchProductsRequest, deleteP
     }
   };
 
-  // Function to handle changes in the form fields
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEditedProduct(prevState => ({
@@ -79,7 +76,7 @@ const ProductListED = ({ products, loading, error, fetchProductsRequest, deleteP
           </tbody>
         </table>
       )}
-      {/* Modal or form for editing the product */}
+    
       {editedProduct && (
         <div className="edit-modal">
           <h2>Edit Product</h2>

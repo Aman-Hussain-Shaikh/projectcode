@@ -22,7 +22,7 @@ const ProductForm = ({ addProduct }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addProduct(formData);
-    // Clear form fields after submission
+   
     setFormData({
       title: '',
       description: '',
